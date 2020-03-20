@@ -1,0 +1,9 @@
+<% @users.each do |us| %>
+<p><b><%=us.age%></b><br>
+<%= us.college%>
+<%= link_to 'Edit', edit_user_path(us.id) %>
+<%= link_to 'Destroy', user_path(us.id),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+</p>
+<% end %>

@@ -1,0 +1,27 @@
+<%= button_to 'Add Employee' ,new_employee_path, :method =>'get' %>
+<%= button_to "Log out", logout_path, method: "delete" %>
+
+<table border="1 solid">                         
+  <tr>                          
+    	<th>emp_code</th>
+    	<th>first_name</th>
+    	<th>last_name</th>
+        <th>email</th> 
+        <th>password</th> 
+    	<th>action</th>
+  </tr>
+	<%@employees.each do |em|%>
+	<tr>
+		<td><p><%= em.emp_code%></p></td>
+		<td><p><%= em.first_name%></p></td>
+		<td><p><%= em.last_name%></p></td>
+		<td><p><%= em.email%></p></td>
+		<td><p><%= em.password%></p></td>
+		<td><%= link_to 'Edit' ,edit_employee_path(em.id)%>
+		<%= link_to 'Destroy', employee_path(em.id),
+              method: :delete,
+              data: { confirm: 'Are you sure?' }%></td>
+	</tr>
+
+ 	<%end%>
+</table> 
