@@ -4,7 +4,7 @@ class EmployeesController < ApplicationController
          if @employees.save
               redirect_to '/index'
          else
-        	abort(@emp.errors.inspect)
+        	abort(@employees.errors.inspect)
        end
 	end
 
@@ -28,7 +28,7 @@ class EmployeesController < ApplicationController
         if @employees.save
             redirect_to '/index'
         else
-           abort(@employees.errors.messages.inspect)      
+           abort(@employees.errors.messages.inspect)    
         end
     end
 
