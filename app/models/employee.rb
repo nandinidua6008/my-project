@@ -2,7 +2,7 @@ class Employee < ApplicationRecord
     validates :first_name, length: { minimum: 6 }, format: { with: /\A[a-zA-Z]+\z/,
     message: "only allows letters" }
 
-    validates :last_name, length: { minimum: 6 }, format: { with: /\A[a-zA-Z]+\z/,
+    validates :last_name, length: { minimum: 2 }, format: { with: /\A[a-zA-Z]+\z/,
     message: "only allows letters" }
 
     validates :emp_code, length: { minimum: 3 }, numericality: { only_integer: true }, uniqueness: true

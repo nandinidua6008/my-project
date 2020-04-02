@@ -28,7 +28,7 @@ end
   def welcome
   end
 def destroy
-    Employee.find_by(session[:Employee_email]).destroy      
+         
     session[:Employee_email] = nil         
     redirect_to '/welcome'     
   end  
