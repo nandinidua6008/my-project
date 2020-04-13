@@ -12,4 +12,5 @@ class Employee < ApplicationRecord
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
     #validates :age, length: { is: 2 }, :greater_than=> 0,message: "only allows digits" }
+
 end
